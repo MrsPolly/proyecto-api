@@ -21,6 +21,7 @@ class ProyectoController extends Controller
             ->get();
 
         foreach ($proyectos as $key => $value) {
+            $datos[$key]['id'] = $value->id;
             $datos[$key]['logo'] = asset('storage/files/'.$value->logo);
             $datos[$key]['titulo_proyecto'] = $value->titulo_proyecto;
             $datos[$key]['color_fondo'] = $value->color_fondo;
